@@ -35,12 +35,15 @@ class HRSystem {
     }
 
     public void setApplicants(List<Applicant> applicants) {
+
         this.applicants = applicants;
     }
-    public void addJobPosition(JobPosition jobPosition){
+
+    public boolean addJobPosition(JobPosition jobPosition){
         if(jobPosition != null && jobPosition.offeredSalaryRangeStart <= jobPosition.offeredSalaryRangeEnd ){
             jobPositions.add(jobPosition) ;
         }
+        return false;
     }
 
     public void addRecruiter(Recruiter recruiter){
